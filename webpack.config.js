@@ -1,4 +1,5 @@
 const path = require('path');
+const ESLintPlugin = require("eslint-webpack-plugin");
 
 const mode = process.env.NODE_ENV;
 
@@ -48,5 +49,8 @@ module.exports = {
         use: ['source-map-loader'],
       }
     ]
-  }
+  },
+  plugins: [new ESLintPlugin({
+    extensions: ['js', 'jsx']
+  })]
 };
