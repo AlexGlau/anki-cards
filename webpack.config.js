@@ -30,7 +30,7 @@ module.exports = {
         options: { cacheDirectory: true }
       },
       {
-        test: /\.scss$/i,
+        test: /\.(scss|css)$/,
         use: [
           'style-loader',
           'css-loader',
@@ -38,7 +38,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(woff2|woff)$/i,
+        test: /\.(woff2|woff|ttf)$/i,
         use: [
           'url-loader'
         ],
@@ -47,6 +47,14 @@ module.exports = {
         test: /\.js$/,
         enforce: 'pre',
         use: ['source-map-loader'],
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg|eot)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ]
       }
     ]
   },
