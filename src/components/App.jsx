@@ -1,7 +1,11 @@
 import React from 'react';
 
+import Start from './Pages/Start';
+
+import 'semantic-ui-css/semantic.min.css';
+
 const App = () => {
-  return <h1>Anki Cards</h1>;
+  return <Start />;
 };
 
 export default App;
