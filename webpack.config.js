@@ -5,6 +5,7 @@ const mode = process.env.NODE_ENV;
 
 module.exports = {
   mode: mode,
+  target: 'web',
   entry: ['./src/index.jsx'],
   output: {
     filename: 'bundle.js',
