@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Start from './Pages/Start';
+import Start from './pages/Start';
 
-import 'semantic-ui-css/semantic.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   return <Start />;

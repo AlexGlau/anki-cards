@@ -1,24 +1,23 @@
 import React from 'react';
 
-
 import Button from '../controls/Button';
 
 import './Start.scss';
 
 const Start = () => {
   return (
-    <div className="start">
-      <div className="ui container lists one column grid">
-        <div className="one column row">
-          <Button>List of words</Button>
-          <Button>List of words</Button>
-          <Button>List of words</Button>
-          <Button>List of words</Button>
-          <Button>List of words</Button>
-        </div>
+    <div className="start container">
+      <div className="lists">
+        <Button className="list-button btn btn-light">List of words</Button>
+        <Button className="list-button btn btn-light">List of words</Button>
+        <Button className="list-button btn btn-light">List of words</Button>
+        <Button className="list-button btn btn-light">List of words</Button>
+        <Button className="list-button btn btn-light">List of words</Button>
+        <Button className="list-button btn btn-light">List of words</Button>
       </div>
-      <div className="ui container buttons">
-        buttons
+      <div className="buttons">
+        <Button className="new-list-button btn btn-primary">New list</Button>
+        <Button className="menu-button btn btn-primary">Menu</Button>
       </div>
     </div>
   );
