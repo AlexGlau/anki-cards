@@ -1,6 +1,5 @@
 .start {
   padding: 1rem 0;
-  height: 100vh;
 
   .lists,
   .buttons {
@@ -17,19 +16,6 @@
       &:last-child {
         margin-bottom: 0;
       }
-    }
-  }
-
-  .buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-
-    .new-list-button,
-    .menu-button {
-      width: 100px;
-      height: 100px;
     }
   }
 }
