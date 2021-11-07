@@ -7,18 +7,19 @@ import New from './pages/New';
 import NavigationPanel from './navigationPanel/NavigationPanel';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../scss/main.scss';
 
 const App = () => {
   return (
     <Router>
       <Switch>
-        <Route path="/new">
+        <Route path="/new" exact>
           <New />
         </Route>
         <Route path="/test" exact>
           <Test />
         </Route>
-        <Route path="/" exact>
+        <Route path="/">
           <Start />
         </Route>
       </Switch>
