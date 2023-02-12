@@ -23,7 +23,6 @@
     "no-global-assign": ["error"],
     "no-fallthrough": ["error"],
     "arrow-spacing": ["error"],
-    "arrow-parens": ["error", "as-needed"],
     "arrow-body-style": ["error", "always"],
     "space-infix-ops": ["error"],
     "space-before-blocks": ["error"],
