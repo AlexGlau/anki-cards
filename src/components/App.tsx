@@ -1,5 +1,4 @@
-import React from 'react';
-import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Start from './pages/Start';
 import Test from './pages/Test';
@@ -9,9 +8,9 @@ import NavigationPanel from './navigationPanel/NavigationPanel';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../scss/main.scss';
 
-const App = () => {
+function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Switch>
         <Route path="/new" exact>
           <New />
@@ -24,7 +23,7 @@ const App = () => {
         </Route>
       </Switch>
       <NavigationPanel />
-    </Router>
+    </BrowserRouter>
   );
 };
 

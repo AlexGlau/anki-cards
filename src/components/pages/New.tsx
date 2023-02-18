@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, ChangeEvent } from 'react';
 import { useDispatch } from 'react-redux';
 
 import { addWord } from '../../store';
@@ -6,7 +6,7 @@ import { addWord } from '../../store';
 import Input from '../controls/Input';
 import Button from '../controls/Button';
 
-const New = () => {
+function New() {
   const [ word, setWord ] = useState('');
   const [ translation, setTranslation ] = useState('');
   const dispatch = useDispatch();
@@ -16,11 +16,11 @@ const New = () => {
     dispatch(action);
   };
 
-  const setWordHandler = (e) => {
+  const setWordHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setWord(e.target.value);
   };
 
-  const setTranslationHandler = (e) => {
+  const setTranslationHandler = (e: ChangeEvent<HTMLInputElement>) => {
     setTranslation(e.target.value);
   };
 
