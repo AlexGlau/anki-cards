@@ -1,5 +1,5 @@
 import React, { useState, ChangeEvent } from 'react';
-import { useDispatch } from 'react-redux';
+import { useAppDispatch } from '../../hooks';
 
 import { addWord } from '../../store';
 
@@ -9,7 +9,7 @@ import Button from '../controls/Button';
 function New() {
   const [ word, setWord ] = useState('');
   const [ translation, setTranslation ] = useState('');
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const addWordHandler = () => {
     const action = addWord({ word, translation });
