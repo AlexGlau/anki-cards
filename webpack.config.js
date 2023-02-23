@@ -6,13 +6,13 @@ const mode = process.env.NODE_ENV;
 module.exports = {
   mode: mode,
   target: 'web',
-  entry: ['./src/index.jsx'],
+  entry: ['./src/index.tsx'],
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'public')
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.tsx', '.ts', '.js', '.jsx']
   },
   optimization: { usedExports: true },
   devServer: {
@@ -24,12 +24,6 @@ module.exports = {
   watchOptions: { ignored: '/node_modules' },
   module: {
     rules: [
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader',
-        options: { cacheDirectory: true }
-      },
       {
         test: /\.(scss|css)$/,
         use: [
@@ -56,10 +50,15 @@ module.exports = {
             loader: 'file-loader',
           },
         ]
-      }
+      },
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
     ]
   },
   plugins: [new ESLintPlugin({
-    extensions: ['js', 'jsx']
+    extensions: ['.ts', '.tsx', 'js', 'jsx']
   })]
 };

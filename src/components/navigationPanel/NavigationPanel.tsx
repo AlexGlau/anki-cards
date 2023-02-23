@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const NavigationPanel = () => {
+function NavigationPanel() {
   return (
     <div className="nav-panel">
       <NavLink to="/" className="nav-tab" exact>Home</NavLink>
