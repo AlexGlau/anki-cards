@@ -4,7 +4,6 @@ interface IButton {
   className: string;
   children: any;
   onClick: () => void;
-
 }
 
 function Button(props: IButton) {
