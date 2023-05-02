@@ -23,6 +23,6 @@ function Input(props: IInput) {
       />
     </>
   );
-};
+}
 
 export default Input;

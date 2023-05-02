@@ -26,6 +26,6 @@ function App() {
       <NavigationPanel />
     </BrowserRouter>
   );
-};
+}
 
 export default App;

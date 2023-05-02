@@ -9,6 +9,6 @@ function NavigationPanel() {
       <NavLink to="/test" className="nav-tab">Test</NavLink>
     </div>
   );
-};
+}
 
 export default NavigationPanel;

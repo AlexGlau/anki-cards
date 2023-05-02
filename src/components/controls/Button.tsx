@@ -17,6 +17,6 @@ function Button(props: IButton) {
       {children}
     </button>
   );
-};
+}
 
 export default Button;

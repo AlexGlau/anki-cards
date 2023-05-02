@@ -58,6 +58,6 @@ function New() {
       </div>
     </div>
   );
-};
+}
 
 export default New;
