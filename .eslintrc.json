@@ -29,6 +29,9 @@
     "space-before-blocks": ["error"],
     "semi-style": ["error"],
     "semi-spacing": ["error"],
-    "comma-spacing": ["error"]
+    "comma-spacing": ["error"],
+    "no-unused-vars": ["error", {
+      "args": "none"
+    }]
   }
 }
