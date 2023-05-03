@@ -9,11 +9,14 @@ import Button from '../controls/Button';
 function New() {
   const [ word, setWord ] = useState('');
   const [ translation, setTranslation ] = useState('');
+
   const dispatch = useAppDispatch();
 
   const addWordHandler = () => {
     const action = addWord({ word, translation });
     dispatch(action);
+    setWord('');
+    setTranslation('');
   };
 
   const setWordHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
