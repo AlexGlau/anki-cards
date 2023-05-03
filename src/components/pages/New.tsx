@@ -13,8 +13,10 @@ function New() {
   const dispatch = useAppDispatch();
 
   const addWordHandler = () => {
-    const action = addWord({ word, translation });
-    dispatch(action);
+    dispatch(
+      addWord({ word, translation })
+    );
+
     setWord('');
     setTranslation('');
   };
