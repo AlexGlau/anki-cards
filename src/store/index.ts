@@ -1,18 +1,22 @@
 import { configureStore, createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-interface IStore {
-  word: string;
-  translation: string;
-}
+import { IStore } from '../models/models';
 
-const initialState: IStore[] = [];
+const initialState: IStore[][] = [[]];
 
 const wordsSlice = createSlice({
   name: 'word',
   initialState,
   reducers: {
     addWord(state, action: PayloadAction<IStore>) {
-      state.push(action.payload);
+      let lastTrain = state[state.length - 1];
+      
+      if (lastTrain.length > 9) {
+        state.push([]);
+        lastTrain = state[state.length - 1];
+      }
+
+      lastTrain.push(action.payload);
     },
   },
 });
