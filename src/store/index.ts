@@ -9,9 +9,11 @@ const wordsSlice = createSlice({
   initialState,
   reducers: {
     addWord(state, action: PayloadAction<IStore>) {
+      const WORDS_IN_TRAINING = 9;
+
       let lastTrain = state[state.length - 1];
-      
-      if (lastTrain.length > 9) {
+
+      if (lastTrain.length > WORDS_IN_TRAINING) {
         state.push([]);
         lastTrain = state[state.length - 1];
       }
