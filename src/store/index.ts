@@ -1,14 +1,14 @@
 import { configureStore, createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import { IStore } from '../models/models';
+import { ICard } from '../models/models';
 
-const initialState: IStore[][] = [[]];
+const initialState: ICard[][] = [[]];
 
 const wordsSlice = createSlice({
   name: 'word',
   initialState,
   reducers: {
-    addWord(state, action: PayloadAction<IStore>) {
+    addWord(state, action: PayloadAction<ICard>) {
       const WORDS_IN_TRAINING = 9;
 
       let lastTrain = state[state.length - 1];

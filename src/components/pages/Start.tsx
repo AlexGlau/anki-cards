@@ -2,16 +2,16 @@ import { useSelector } from 'react-redux';
 
 import Button from '../controls/Button';
 
-import { IStore } from '../../models/models';
+import { ICard } from '../../models/models';
 import { RootState } from '../../store';
 
 import './Start.scss';
 
 function Start() {
-  const wordsList = useSelector((state: RootState): IStore[][] => (
+  const wordsList = useSelector((state: RootState): ICard[][] => (
     state.words
   ));
-  
+
   // Handler draft
   const ButtonHandler = (): void => {};
 
@@ -24,7 +24,7 @@ function Start() {
               return null;
             }
           })}
-          {wordsList.map((word: IStore[], index: number): JSX.Element => (
+          {wordsList.map((word: ICard[], index: number): JSX.Element => (
             <Button
               key={`${index}-${word[0]?.word}`}
               className="list-button btn btn-light"
