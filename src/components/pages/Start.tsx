@@ -13,7 +13,7 @@ function Start() {
   ));
 
   // Handler draft
-  const ButtonHandler = (): void => {};
+  const buttonHandler = (): void => {};
 
   return (
     <div className="start container">
@@ -27,7 +27,7 @@ function Start() {
               <Button
                 key={`${index}-${trainingName}`}
                 className="list-button btn btn-light"
-                onClick={ButtonHandler}
+                onClick={buttonHandler}
               >
                 {trainingName}
               </Button>
