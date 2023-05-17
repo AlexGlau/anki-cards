@@ -19,20 +19,20 @@ function Start() {
     <div className="start container">
       <div className="row">
         <div className="lists col">
-          {(function () {
-            if (wordsList.length === 0) {
-              return null;
-            }
+          {wordsList.map((card: ICard[], index: number): JSX.Element => {
+            // A first word in a training list is used as a training name
+            const trainingName = card[0]?.word;
+
+            return (
+              <Button
+                key={`${index}-${trainingName}`}
+                className="list-button btn btn-light"
+                onClick={ButtonHandler}
+              >
+                {trainingName}
+              </Button>
+            );
           })}
-          {wordsList.map((word: ICard[], index: number): JSX.Element => (
-            <Button
-              key={`${index}-${word[0]?.word}`}
-              className="list-button btn btn-light"
-              onClick={ButtonHandler}
-            >
-              {word[0]?.word}
-            </Button>
-          ))}
         </div>
       </div>
     </div>
