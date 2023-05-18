@@ -1,38 +1,14 @@
-import { configureStore, createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 
-import { ICard } from '../models/models';
-
-const initialState: ICard[][] = [[]];
-
-const wordsSlice = createSlice({
-  name: 'word',
-  initialState,
-  reducers: {
-    addWord(state, action: PayloadAction<ICard>) {
-      const WORDS_IN_TRAINING = 9;
-
-      let lastTrain = state[state.length - 1];
-
-      if (lastTrain.length > WORDS_IN_TRAINING) {
-        state.push([]);
-        lastTrain = state[state.length - 1];
-      }
-
-      lastTrain.push(action.payload);
-    },
-  },
-});
+import wordsReducer from '../features/words/wordsSlice';
 
 const store = configureStore({
   reducer: {
-    words: wordsSlice.reducer,
-  },
+    words: wordsReducer,
+  }
 });
 
-store.getState();
-
 export { store };
-export const { addWord } = wordsSlice.actions;
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;

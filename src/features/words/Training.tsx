@@ -1,14 +1,10 @@
-import React from 'react';
+import Button from '../../components/Button';
 
-import Button from '../controls/Button';
-
-import './Test.scss';
+import './Training.scss';
 
 function Test() {
   // Draft function
-  const ButtonHandler = (): void => {
-    console.log('click');
-  };
+  const buttonHandler = (): void => {};
 
   return (
     <div className="test container">
@@ -22,25 +18,25 @@ function Test() {
           <div className="options">
             <Button
               className="btn btn-light"
-              onClick={ButtonHandler}
+              onClick={buttonHandler}
             >
               Option 1
             </Button>
             <Button
               className="btn btn-light"
-              onClick={ButtonHandler}
+              onClick={buttonHandler}
             >
               Option 1
             </Button>
             <Button
               className="btn btn-light"
-              onClick={ButtonHandler}
+              onClick={buttonHandler}
             >
               Option 1
             </Button>
             <Button
               className="btn btn-light"
-              onClick={ButtonHandler}
+              onClick={buttonHandler}
             >
               Option 1
             </Button>

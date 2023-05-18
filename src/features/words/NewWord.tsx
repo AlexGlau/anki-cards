@@ -1,10 +1,10 @@
 import React, { useState, ChangeEvent } from 'react';
 import { useAppDispatch } from '../../hooks';
 
-import { addWord } from '../../store';
+import { addWord } from './wordsSlice';
 
-import Input from '../controls/Input';
-import Button from '../controls/Button';
+import Input from '../../components/Input';
+import Button from '../../components/Button';
 
 function New() {
   const [ word, setWord ] = useState('');

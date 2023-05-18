@@ -1,11 +1,11 @@
 import { useSelector } from 'react-redux';
 
-import Button from '../controls/Button';
+import Button from '../../components/Button';
 
 import { ICard } from '../../models/models';
 import { RootState } from '../../store';
 
-import './Start.scss';
+import './ListOfTrainings.scss';
 
 function Start() {
   const wordsList = useSelector((state: RootState): ICard[][] => (
